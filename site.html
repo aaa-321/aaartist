@@ -41,19 +41,23 @@ body {
   <a href="#contact">Contact</a>
   <a href="#about">About</a>
 </div>
+
 <!-- START HERE -->
 <div id="div1" style="padding-left:16px">
+<p id="demo"></p>
 <p id="imgzone"></p>
 </div>
 
 <script>
-const imgDatabase = ["https://www.w3schools.com/jsref/img_pulpit.jpg", "https://www.w3schools.com/jsref/img_pulpit.jpg", "https://www.w3schools.com/jsref/img_pulpit.jpg"];
-
-for (let i = 0; i < imgDatabase.length; i++) {
-	imgDatabase[i] = `<img src=${imgDatabase[i]}>`;
+const imgSource = "https://aaa-321.github.io/aaartist/imgDatabase/";
+const imgNames = ["SabYetUnique.png", "subscriber contests are intense ft weirdyetunique.png", "weirdyetunique's assignment comic.png"];
+const imgDatabase = [];
+for (let i = 0; i < imgNames.length; i++) {
+	imgDatabase.push(`${imgSource}${imgNames[i]}`);
+    imgDatabase[i] = `<img src="${imgDatabase[i]}">`;
+	document.getElementById("imgzone").innerHTML += imgDatabase[i];
 }
 
-document.getElementById("imgzone").innerHTML += imgDatabase;
 </script>
 
 </body>
